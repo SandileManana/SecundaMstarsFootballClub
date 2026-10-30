@@ -3,28 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us Secunda Mighty Stars FC</title>
+  <title>About Us | Secunda Mighty Stars FC</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/aboutus.css">
-</head>
 
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/aboutus.css">   <!-- aboutus, not home -->
+
+  <script src="JS/main.js" defer></script>
+</head>
 <body>
- 
-  <header class="main header">
-    <img src="IMAGE/a.png" width="60" height="60" alt="secunda mighty stars logo">
-    <nav>
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="aboutus.html">About us</a></li>
-        <li><a href="fixtures and results.html">Fixtures&Results</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="Squad.html">teamProfile</a></li>
-      </ul>
-    </nav>
-    <script src="JS/main.js" defer></script>
-  </header>
+<header class="main header">
+  <a href="home.html">
+    <img class="header-logo" src="IMAGE/a.png" width="60" height="60" alt="Secunda Mighty Stars logo">
+  </a>
+
+  <!-- the switch: only shows on small screens -->
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+
+  <nav id="site-nav">
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="aboutus.html">About us</a></li>
+      <li><a href="fixtures.html">Fixtures&amp;Results</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="Squad.html">Team Profile</a></li>
+    </ul>
+  </nav>
+</header>
+  
+
+  <!-- HERO -->
 
   <section class="page-banner">
     <h1>Welcome to Secunda Mighty Stars Football Club</h1>
@@ -71,7 +81,7 @@
     </ul>
   </section>
 
-  <!-- HOME GROUND -->
+  <!--our  HOME GROUND location -->
   <section class="stadium">
     <div>
       <h2>Our Home Ground</h2>
@@ -79,7 +89,7 @@
     </div>
   </section>
 
-  <!-- COMMUNITY -->
+  <!-- what we do in the community  -->
   <section class="community">
     <div>
       <h2>In the Community</h2>
