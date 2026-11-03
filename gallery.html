@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery | Secunda Mighty Stars FC</title>
+  <meta name="description" content="Photos of Secunda Mighty Stars FC: matchday moments, our supporters, the squad and the club kit. Click any photo to enlarge it.">
+  <meta property="og:title" content="Photo Gallery | Secunda Mighty Stars FC">
+  <meta property="og:description" content="Photos of Secunda Mighty Stars FC: matchday moments, our supporters, the squad and the club kit. Click any photo to enlarge it.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+  <link rel="canonical" href="https://secundamstars.netlify.app/gallery.html">
+  <meta property="og:url" content="https://secundamstars.netlify.app/gallery.html">
+  <meta property="og:image" content="https://secundamstars.netlify.app/images/players-in-new-kit.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/part3.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/site.js" defer></script>
+</head>
+<body>
+  <header class="main header">
+    <a href="home.html">
+      <img class="header-logo" src="images/club-logo.png" width="60" height="60" alt="Secunda Mighty Stars FC logo">
+    </a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+
+    <nav id="site-nav" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="fixtures.html">Fixtures &amp; Results</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="squad.html">Team Profile</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-banner p3-banner">
+    <h1>Photo Gallery</h1>
+    <p>Matchday moments, supporters and club life. Click a photo to enlarge it.</p>
+  </section>
+
+  <div class="filter-bar" role="group" aria-label="Filter photos">
+    <button type="button" data-filter="all" aria-pressed="true">All</button>
+    <button type="button" data-filter="Team" aria-pressed="false">Team</button>
+    <button type="button" data-filter="Matchday" aria-pressed="false">Matchday</button>
+    <button type="button" data-filter="Fans" aria-pressed="false">Fans</button>
+    <button type="button" data-filter="Club" aria-pressed="false">Club</button>
+  </div>
+
+  <ul class="gallery-grid" data-lightbox>
+      <li class="gallery-item" data-category="Team">
+        <button type="button" class="gallery-thumb" aria-label="Open photo: The Stars in the new kit">
+          <img src="images/players-in-new-kit.jpeg" alt="Four Secunda Mighty Stars FC players in the club's black and red kit, arms crossed" loading="lazy" decoding="async">
+          <span class="gallery-caption">The Stars in the new kit</span>
+        </button>
+      </li>
+      <li class="gallery-item" data-category="Team">
+        <button type="button" class="gallery-thumb" aria-label="Open photo: The first team squad">
+          <img src="images/squad-team-photo.jpg" alt="The Secunda Mighty Stars FC squad posing for a team photo on the pitch" loading="lazy" decoding="async">
+          <span class="gallery-caption">The first team squad</span>
+        </button>
+      </li>
+      <li class="gallery-item" data-category="Team">
+        <button type="button" class="gallery-thumb" aria-label="Open photo: Player portrait">
+          <img src="images/player-number-24-portrait.jpeg" alt="A Secunda Mighty Stars player in the club kit standing on the pitch at sunset" loading="lazy" decoding="async">
+          <span class="gallery-caption">Player portrait</span>
+        </button>
+      </li>
+      <li class="gallery-item" data-category="Matchday">
+        <button type="button" class="gallery-thumb" aria-label="Open photo: Closing down the opposition">
+          <img src="images/match-action-closing-down-opponent.jpeg" alt="Secunda Mighty Stars players close down a sky-blue opponent during a match" loading="lazy" decoding="async">
+          <span class="gallery-caption">Closing down the opposition</span>
+        </button>
+      </li>
+      <li class="gallery-item" data-category="Matchday">
+        <button type="button" class="gallery-thumb" aria-label="Open photo: Going for a bicycle kick">
+          <img src="images/match-action-bicycle-kick.jpeg" alt="A Secunda Mighty Stars player attempts a bicycle kick during a match" loading="lazy" decoding="async">
+          <span class="gallery-caption">Going for a bicycle kick</span>
+        </button>
+      </li>
+      <li class="gallery-item" data-category="Matchday">
+        <button type="button" class="gallery-thumb" aria-label="Open photo: Shielding the ball">
+          <img src="images/match-action-shielding-the-ball.jpeg" alt="A Secunda Mighty Stars player shields the ball from a sky-blue opponent" loading="lazy" decoding="async">
+          <span class="gallery-caption">Shielding the ball</span>
+        </button>
+      </li>
+      <li class="gallery-item" data-category="Fans">
+        <button type="button" class="gallery-thumb" aria-label="Open photo: Our supporters">
+          <img src="images/fans-cheering-in-stands.jpg" alt="Supporters in red jackets cheering from the stands at a match" loading="lazy" decoding="async">
+          <span class="gallery-caption">Our supporters</span>
+        </button>
+      </li>
+      <li class="gallery-item" data-category="Club">
+        <button type="button" class="gallery-thumb" aria-label="Open photo: The supporters kit">
+          <img src="images/supporters-kit-shirts.jpeg" alt="Folded Secunda Mighty Stars supporters shirts in several sizes" loading="lazy" decoding="async">
+          <span class="gallery-caption">The supporters kit</span>
+        </button>
+      </li>
+      <li class="gallery-item" data-category="Club">
+        <button type="button" class="gallery-thumb" aria-label="Open photo: Training session">
+          <img src="images/training-session-cones.jpg" alt="A player runs through training poles at a Secunda Mighty Stars practice session" loading="lazy" decoding="async">
+          <span class="gallery-caption">Training session</span>
+        </button>
+      </li>
+      <li class="gallery-item" data-category="Club">
+        <button type="button" class="gallery-thumb" aria-label="Open photo: The stadium view">
+          <img src="images/secunda-stadium-view.jpg" alt="View of a running track and grass pitch from the stands" loading="lazy" decoding="async">
+          <span class="gallery-caption">The stadium view</span>
+        </button>
+      </li>
+  </ul>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-col">
+      <h3>Secunda Mighty Stars FC</h3>
+      <p>Izinkanyezi zesbakabaka</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Club</h3>
+      <a href="fixtures.html">Fixtures</a>
+      <a href="squad.html">Squad</a>
+      <a href="about-us.html">History</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+
+    <section class="sponsors">
+      <h2>Our Partners</h2>
+      <ul>
+        <li><img src="images/sponsor-maleleza-lifestyle-hub.jpg" alt="TM Maleleza Lifestyle Hub, club partner" width="60" height="60" loading="lazy"></li>
+      </ul>
+    </section>
+
+    <div class="footer-col">
+      <h3>Support &amp; Contacts</h3>
+      <ul>
+        <li>Chairman: Fanyana &mdash; <a href="tel:+27172028700">017 202 8700</a></li>
+        <li>Manager &mdash; <a href="tel:+27175057111">017 505 7111</a></li>
+        <li><a href="enquiry.html">Make an enquiry</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Follow</h3>
+      <!-- TODO: replace with the club's real profile addresses -->
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+    </div>
+
+    <p class="footer-bottom">&copy; Secunda Mighty Stars FC. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

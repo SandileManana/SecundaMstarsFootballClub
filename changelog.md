@@ -85,3 +85,66 @@ How the References Were Used
 The references were mainly used to improve my understanding of HTML and CSS while developing Part 2 of the project. I used them as learning material to understand concepts such as responsive layouts, navigation, cards, forms, CSS Grid, Flexbox and page structure.
 
 The final Secunda Mighty Stars FC website was developed and adapted for the requirements of my own project. The content, football club information, page structure and design decisions were adjusted for the specific website rather than simply copying a tutorial project.
+
+
+
+# PART 3 CHANGES (final submission)
+
+## 8. JavaScript enhancements (Functionality 2.1)
+- Created js/site.js (all page behaviour), js/data.js (all content as data) and js/forms.js (form validation). js/main.js is the original navigation script.
+- Accordion: a "Frequently Asked Questions" accordion on the About us page (one answer open at a time, keyboard accessible, animated).
+- Tabs: the Fixtures & Results page now has Upcoming / Results / Standings tabs. Arrow keys work and links such as fixtures.html#standings open the right tab.
+- Modal: clicking a player card on the Team Profile page, or "Read more" on a news card, opens a modal pop-up (Esc closes it and keyboard focus is kept inside).
+- Interactive map: replaced the Google Maps iframe on the About us page with a Leaflet + OpenStreetMap map with a Secunda Stadium marker and popup.
+- Animations and transitions: cards fade up as they scroll into view, the numbers in the club stats count up, cards lift on hover, the accordion slides open, and there is a back-to-top button. All of it switches off for visitors who have "reduce motion" turned on.
+- Advanced DOM manipulation: elements are created with document.createElement through a helper, one click listener handles every gallery photo (event delegation), IntersectionObserver drives the scroll effects, and the modal and lightbox are built on demand.
+- Gallery with lightbox: new gallery.html with category filter buttons and a lightbox (next, previous, Esc and arrow keys).
+
+## 9. Dynamic content (Functionality 2.2)
+- News, fixtures, results, standings and the squad are stored once in js/data.js and built into the pages by JavaScript. The standings table used to be copied into two pages.
+- Search, filter and sort: the News page (search text, category, newest or oldest) and the Team Profile page (search name or number, position, sort by number or name).
+- The W / D / L form badges are now worked out from the score, so a badge can never disagree with the result.
+
+## 10. Forms and validation (Section 4)
+- New enquiry.html (membership, sponsorship or volunteering). A second dropdown is built from the first, and after a valid submit the page answers with the cost and availability.
+- New contact.html (general message). After validation the message is compiled into an email (To, Subject and Body) and the visitor presses a button to send it from their own email app.
+- HTML5 validation attributes (required, minlength, maxlength, type, pattern) plus JavaScript validation: South African phone numbers, name characters, email format, date range (today to 12 months ahead) and message length with a live counter.
+- Error handling: a message appears next to each invalid field, the first invalid field is focused, and screen readers are told through aria-invalid.
+- AJAX submission with fetch() to the form's action address (Formspree).
+- The old enquiry form was removed from the About us page and replaced with links to the two new pages.
+
+## 11. SEO
+- Every page has a unique title, meta description, canonical link and Open Graph tags.
+- Headings: every page now has exactly one h1 (home and team profile were missing one).
+- Image optimisation: descriptive file names (table below), descriptive alt text, and lazy loading for images below the fold. An unused 745 KB photo was compressed.
+- URL structure: lowercase, hyphenated page names (about-us.html, squad.html) and lowercase folders (css, js, images).
+- Internal linking: footers and pages link to each other, with calls to action to the enquiry and contact pages.
+- Local SEO: schema.org SportsTeam structured data (JSON-LD) on the home page, with Secunda, Mpumalanga.
+- robots.txt and sitemap.xml were created.
+- Page speed: scripts use defer, fonts use display=swap with preconnect, and images are lazy loaded.
+- Security: external links use rel="noopener noreferrer", form input is only ever inserted into the page as text (never as HTML), a hidden honeypot field catches spam bots, and line breaks are stripped from email subjects so extra email headers cannot be injected.
+
+
+### Image renames
+| Old name | New name |
+|---|---|
+| a.png | club-logo.png |
+| download.jpg | sponsor-maleleza-lifestyle-hub.jpg |
+| o.jpg | player-placeholder.jpg |
+| WhatsApp Image 2026-09-17 at 00.25.35.jpeg | players-in-new-kit.jpeg |
+| vk.jpeg | match-action-closing-down-opponent.jpeg |
+| volks.jpeg | match-action-shielding-the-ball.jpeg |
+| volkss.jpeg | match-action-bicycle-kick.jpeg |
+| volk.jpeg | player-walking-off-pitch.jpeg |
+| debut.jpeg | player-number-24-portrait.jpeg |
+| merchandise.jpeg | supporters-kit-shirts.jpeg |
+| v.jpg | training-session-cones.jpg |
+| NEDBANK7_56703.jpg | fans-cheering-in-stands.jpg |
+| l.jpg | squad-team-photo.jpg |
+| s.jpg | secunda-stadium-view.jpg |
+| kick.JPG | free-kick-defensive-wall.jpg |
+| m.jpg | team-photo-purple-kit.jpg |
+| qw.jpg | match-action-orange-kit-opponent.jpg |
+| b.jpg | match-action-orange-kit-opponent-small.jpg |
+| new kit.jpeg |  |
+

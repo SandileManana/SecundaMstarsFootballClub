@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Secunda Mighty Stars FC | Club History & Values</title>
+  <meta name="description" content="Learn the history, mission and values of Secunda Mighty Stars FC, founded in eMbalenhle in 1990, and find our home ground, Secunda Stadium.">
+  <meta property="og:title" content="About Secunda Mighty Stars FC | Club History & Values">
+  <meta property="og:description" content="Learn the history, mission and values of Secunda Mighty Stars FC, founded in eMbalenhle in 1990, and find our home ground, Secunda Stadium.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+  <link rel="canonical" href="https://secundamstars.netlify.app/about-us.html">
+  <meta property="og:url" content="https://secundamstars.netlify.app/about-us.html">
+  <meta property="og:image" content="https://secundamstars.netlify.app/images/players-in-new-kit.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/aboutus.css">
+  <link rel="stylesheet" href="css/part3.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/data.js" defer></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="js/site.js" defer></script>
+</head>
+<body>
+  <header class="main header">
+    <a href="home.html">
+      <img class="header-logo" src="images/club-logo.png" width="60" height="60" alt="Secunda Mighty Stars FC logo">
+    </a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+
+    <nav id="site-nav" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="fixtures.html">Fixtures &amp; Results</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="squad.html">Team Profile</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BANNER -->
+  <section class="page-banner">
+    <h1>Welcome to Secunda Mighty Stars Football Club</h1>
+  </section>
+
+  <!-- CLUB HISTORY -->
+  <section class="club-history">
+    <div>
+      <h2>About Our History</h2>
+    </div>
+    <p>Secunda Mighty Stars FC was founded in 1990 by a group of local football
+       enthusiasts determined to give the community a club to call its own. From
+       humble beginnings on a dusty local pitch, the club has grown into one of
+       the region's most respected amateur sides.</p>
+    <ol class="history-timeline">
+      <li><strong>1990</strong>: established in eMbalenhle</li>
+      <li><strong>2010</strong>: first LFA champions</li>
+      <li><strong>2016</strong>: promotion to the Hollywoodbets league</li>
+      <li><strong>2023</strong>: Nedbank Cup Last 16</li>
+    </ol>
+  </section>
+
+  <!-- MISSION & VALUES -->
+  <section class="mission-statement">
+    <div>
+      <h2>Mission Statement</h2>
+    </div>
+    <p>To develop local talent, compete with pride, and give the Secunda
+       community a team worth rallying behind.</p>
+    <ul class="values-list">
+      <li>
+        <h3>Community</h3>
+        <p>Rooted in Secunda and eMbalenhle, built by and for the people who support us.</p>
+      </li>
+      <li>
+        <h3>Development</h3>
+        <p>Investing in youth talent and giving local players the opportunity to rise and climb the ranks of South African football.</p>
+      </li>
+      <li>
+        <h3>Passion</h3>
+        <p>Playing with heart, on and off the pitch.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- HOME GROUND -->
+  <section class="stadium">
+    <div>
+      <h2>Our Home Ground</h2>
+      <p>Secunda Stadium has been home to Secunda Stars since 2020. The stadium was built to help locals thrive in sports.</p>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="community">
+    <div>
+      <h2>In the Community</h2>
+    </div>
+    <p>Beyond match days, Secunda Mighty Stars runs free weekend coaching clinics
+       for local youth and partners with area schools to promote sport and
+       education together.</p>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section class="faq">
+    <div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="accordion" data-accordion data-single>
+      <div class="accordion-item">
+        <h3><button class="accordion-trigger" type="button" id="faq-btn-1" aria-expanded="false" aria-controls="faq-panel-1">Where do Secunda Mighty Stars play?</button></h3>
+        <div class="accordion-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1"><div><p>We play our home matches at Secunda Stadium in Secunda, Mpumalanga. Use the map below to find us.</p></div></div>
+      </div>
+      <div class="accordion-item">
+        <h3><button class="accordion-trigger" type="button" id="faq-btn-2" aria-expanded="false" aria-controls="faq-panel-2">How do I buy tickets?</button></h3>
+        <div class="accordion-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2"><div><p>Tickets for home matches are sold at the gate on match day.</p></div></div>
+      </div>
+      <div class="accordion-item">
+        <h3><button class="accordion-trigger" type="button" id="faq-btn-3" aria-expanded="false" aria-controls="faq-panel-3">How can I join the club or become a sponsor?</button></h3>
+        <div class="accordion-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3"><div><p>Visit our <a href="enquiry.html">enquiry page</a> to ask about membership, sponsorship or volunteering. We reply with the cost and availability.</p></div></div>
+      </div>
+      <div class="accordion-item">
+        <h3><button class="accordion-trigger" type="button" id="faq-btn-4" aria-expanded="false" aria-controls="faq-panel-4">Does the club run youth programmes?</button></h3>
+        <div class="accordion-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4"><div><p>Yes. We run free weekend coaching clinics for local youth and partner with area schools to promote sport and education together.</p></div></div>
+      </div>
+      <div class="accordion-item">
+        <h3><button class="accordion-trigger" type="button" id="faq-btn-5" aria-expanded="false" aria-controls="faq-panel-5">Who do I contact for anything else?</button></h3>
+        <div class="accordion-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5"><div><p>Use our <a href="contact.html">contact page</a>, or phone the Chairman on 017 202 8700 or the Manager on 017 505 7111.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION MAP (Leaflet builds the map inside #map) -->
+  <section class="location">
+    <h2>Find Us</h2>
+    <p>Secunda Stadium, Secunda, Mpumalanga</p>
+    <div class="map-frame">
+      <div id="map" role="region" aria-label="Map showing Secunda Stadium">
+        <noscript><p>The interactive map needs JavaScript. <a href="https://www.google.com/maps/search/?api=1&amp;query=Secunda+Stadium,+Secunda,+Mpumalanga" target="_blank" rel="noopener noreferrer">Open Secunda Stadium in Google Maps</a>.</p></noscript>
+      </div>
+    </div>
+    <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Secunda+Stadium,+Secunda,+Mpumalanga" target="_blank" rel="noopener noreferrer">Get directions in Google Maps &rarr;</a>
+  </section>
+
+  <!-- GET INVOLVED (the enquiry form now lives on its own page) -->
+  <section class="get-involved">
+    <h2>Get Involved</h2>
+    <p>Want to become a member, sponsor the club or volunteer? Or just say hello?</p>
+    <a class="btn btn-primary" href="enquiry.html">Make an enquiry</a>
+    <a class="btn" href="contact.html">Contact us</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-col">
+      <h3>Secunda Mighty Stars FC</h3>
+      <p>Izinkanyezi zesbakabaka</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Club</h3>
+      <a href="fixtures.html">Fixtures</a>
+      <a href="squad.html">Squad</a>
+      <a href="about-us.html">History</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+
+    <section class="sponsors">
+      <h2>Our Partners</h2>
+      <ul>
+        <li><img src="images/sponsor-maleleza-lifestyle-hub.jpg" alt="TM Maleleza Lifestyle Hub, club partner" width="60" height="60" loading="lazy"></li>
+      </ul>
+    </section>
+
+    <div class="footer-col">
+      <h3>Support &amp; Contacts</h3>
+      <ul>
+        <li>Chairman: Fanyana &mdash; <a href="tel:+27172028700">017 202 8700</a></li>
+        <li>Manager &mdash; <a href="tel:+27175057111">017 505 7111</a></li>
+        <li><a href="enquiry.html">Make an enquiry</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Follow</h3>
+      <!-- TODO: replace with the club's real profile addresses -->
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+    </div>
+
+    <p class="footer-bottom">&copy; Secunda Mighty Stars FC. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

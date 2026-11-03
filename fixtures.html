@@ -3,234 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Secunda Mighty Stars FC | fixtures</title>
-
+  <title>Fixtures, Results & League Table | Secunda Mighty Stars FC</title>
+  <meta name="description" content="See Secunda Mighty Stars FC upcoming fixtures, recent results, current form and the latest league standings.">
+  <meta property="og:title" content="Fixtures, Results & League Table | Secunda Mighty Stars FC">
+  <meta property="og:description" content="See Secunda Mighty Stars FC upcoming fixtures, recent results, current form and the latest league standings.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+  <link rel="canonical" href="https://secundamstars.netlify.app/fixtures.html">
+  <meta property="og:url" content="https://secundamstars.netlify.app/fixtures.html">
+  <meta property="og:image" content="https://secundamstars.netlify.app/images/players-in-new-kit.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/fixtures.css">
-
-
-  <script src="JS/main.js" defer></script>
+  <link rel="stylesheet" href="css/part3.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/site.js" defer></script>
 </head>
-
 <body>
   <header class="main header">
-  <a href="home.html">
-    <img class="header-logo" src="IMAGE/a.png" width="60" height="60" alt="Secunda Mighty Stars logo">
-  </a>
+    <a href="home.html">
+      <img class="header-logo" src="images/club-logo.png" width="60" height="60" alt="Secunda Mighty Stars FC logo">
+    </a>
 
-  
-  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
 
-  <nav id="site-nav">
-    <ul class="nav-links">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="aboutus.html">About us</a></li>
-      <li><a href="fixtures.html">Fixtures&amp;Results</a></li>
-      <li><a href="news.html">News</a></li>
-      <li><a href="Squad.html">Team Profile</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav id="site-nav" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="fixtures.html">Fixtures &amp; Results</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="squad.html">Team Profile</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- HERO -->
-     <section class="page-banner">
+  <!-- BANNER -->
+  <section class="page-banner">
     <h1>Fixtures &amp; Results</h1>
     <p>Every match, every result, every point on the table.</p>
   </section>
 
-  <section class="form-section">
-    <h2>Recent Form</h2>
-    <div class="form-guide">
-      <div class="form-item">
-        <span class="form-badge win">W</span>
-        <p>3&ndash;1 vs benoni rabbits</p>
+  <!-- TABS: Upcoming | Results | Standings -->
+  <div class="tabs" data-tabs>
+    <div class="tab-list" role="tablist" aria-label="Fixtures, results and standings">
+      <button type="button" role="tab" id="tab-upcoming" aria-controls="panel-upcoming" aria-selected="true">Upcoming</button>
+      <button type="button" role="tab" id="tab-results" aria-controls="panel-results" aria-selected="false" tabindex="-1">Results</button>
+      <button type="button" role="tab" id="tab-standings" aria-controls="panel-standings" aria-selected="false" tabindex="-1">Standings</button>
+    </div>
+
+    <div class="tab-panel" role="tabpanel" id="panel-upcoming" aria-labelledby="tab-upcoming">
+      <section class="fixture">
+        <div class="section-header">
+          <h2>Upcoming Fixtures</h2>
+        </div>
+        <ul class="fixture-list" id="upcoming-list"></ul>
+      </section>
+    </div>
+
+    <div class="tab-panel" role="tabpanel" id="panel-results" aria-labelledby="tab-results" hidden>
+      <section class="form-section">
+        <h2>Recent Form</h2>
+        <div class="form-guide" id="form-guide"></div>
+      </section>
+    </div>
+
+    <div class="tab-panel" role="tabpanel" id="panel-standings" aria-labelledby="tab-standings" hidden>
+      <div class="logs">
+        <h2>League Standings</h2>
+        <table>
+          <thead>
+            <tr><th>Pos</th><th>Club</th><th>Pld</th><th>Pts</th></tr>
+          </thead>
+          <tbody id="standings-body"></tbody>
+        </table>
       </div>
-      <div class="form-item">
-        <span class="form-badge win">w</span>
-        <p>2&ndash;2 vs Kwadnebele</p>
-      </div>
-      <div class="form-item">
-        <span class="form-badge draw">D</span>
-        <p>3&ndash;3 vs phezulu </p>
-      </div>
     </div>
-  </section>
+  </div>
 
-    <!--fixtures-->
-    <section class ="fixture">
-      <div class ="section-header">
-        <h2>upcoming fixture</h2>
-</div>  
-<ul class="fixture-list">
-  <li>
-    <p class="matchweek">Hollywood League &middot; Matchday 1</p>
-    <div class="fixture-teams">
-      <span class="team home">Secunda Mighty Stars</span>
-      <span class="vs">vs</span>
-      <span class="team away">kwandebele united</span>
-    </div>
-    <p class="fixture-meta">Sat 12 Sep &middot; 15:00 &middot; Secunda Stadium</p>
-    <p class="fixture-tickets">Tickets sold at the gate</p>
-  </li>
-
-  <li>
-    <p class="matchweek">Hollywood League &middot; Matchday 2</p>
-    <div class="fixture-teams">
-      <span class="team home">Secunda Mighty Stars</span>
-      <span class="vs">vs</span>
-      <span class="team away">Home culture express</span>
-    </div>
-    <p class="fixture-meta">Sat 19 Sep &middot; 15:00 &middot; Secunda Stadium</p>
-    <p class="fixture-tickets">Tickets sold at the gate</p>
-  </li>
-
-  <li>
-    <p class="matchweek">Hollywood League &middot; Matchday 3</p>
-    <div class="fixture-teams">
-      <span class="team home">Secunda Mighty Stars</span>
-      <span class="vs">vs</span>
-      <span class="team away">shimandel</span>
-    </div>
-    <p class="fixture-meta">26 Sep &middot; 15:00 &middot; Secunda Stadium</p>
-    <p class="fixture-tickets">Tickets sold at the gate</p>
-  </li>
-</ul>
-    </section>
- <div class="logs">
-      <h3>League Standings</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Pos</th>
-            <th>Club</th>
-            <th>Pld</th>
-            <th>Pts</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Secunda Mighty Stars</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Shimandel</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>witbank CityLads</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Mjali fc</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Phezulu fc</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>amsterdam united</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>middleburg united</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>amsterdam united</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>Armory Fc</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>Home defenders fc</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>home culture</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>carolina young boys fc</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>13</td>
-            <td>kwandebele united</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
- 
- <!--footer-->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-col">
       <h3>Secunda Mighty Stars FC</h3>
-      <p>izinkanyezi zesbakabaka.</p>
+      <p>Izinkanyezi zesbakabaka</p>
     </div>
- 
+
     <div class="footer-col">
       <h3>Club</h3>
-      <a href="fixtures and results.html">Fixtures</a>
-      <a href="Squad.html">Squad</a>
-      <a href="aboutus.html">History</a>
+      <a href="fixtures.html">Fixtures</a>
+      <a href="squad.html">Squad</a>
+      <a href="about-us.html">History</a>
+      <a href="gallery.html">Gallery</a>
     </div>
- 
+
     <section class="sponsors">
       <h2>Our Partners</h2>
       <ul>
-        <li><img src="IMAGE/download.jpg" alt="sponsor" width="60" height="60"></li>
+        <li><img src="images/sponsor-maleleza-lifestyle-hub.jpg" alt="TM Maleleza Lifestyle Hub, club partner" width="60" height="60" loading="lazy"></li>
       </ul>
     </section>
- 
+
     <div class="footer-col">
       <h3>Support &amp; Contacts</h3>
       <ul>
-        <li>Chairman: Fanyana  017 202 8700</li>
-        <li>Manager  017 505 7111</li>
+        <li>Chairman: Fanyana &mdash; <a href="tel:+27172028700">017 202 8700</a></li>
+        <li>Manager &mdash; <a href="tel:+27175057111">017 505 7111</a></li>
+        <li><a href="enquiry.html">Make an enquiry</a></li>
+        <li><a href="contact.html">Contact us</a></li>
       </ul>
     </div>
- 
+
     <div class="footer-col">
       <h3>Follow</h3>
-      <a href="instagram">Instagram</a>
-      <a href="facebook">X / Twitter</a>
+      <!-- TODO: replace with the club's real profile addresses -->
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a>
     </div>
- 
+
     <p class="footer-bottom">&copy; Secunda Mighty Stars FC. All rights reserved.</p>
   </footer>
- 
+
 </body>
 </html>

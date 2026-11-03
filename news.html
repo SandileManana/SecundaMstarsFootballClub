@@ -3,109 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News | Secunda Mighty Stars FC</title>
-
+  <title>Club News & Match Reports | Secunda Mighty Stars FC</title>
+  <meta name="description" content="Read the latest Secunda Mighty Stars FC news, match reports and squad updates. Search and filter all our stories.">
+  <meta property="og:title" content="Club News & Match Reports | Secunda Mighty Stars FC">
+  <meta property="og:description" content="Read the latest Secunda Mighty Stars FC news, match reports and squad updates. Search and filter all our stories.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+  <link rel="canonical" href="https://secundamstars.netlify.app/news.html">
+  <meta property="og:url" content="https://secundamstars.netlify.app/news.html">
+  <meta property="og:image" content="https://secundamstars.netlify.app/images/players-in-new-kit.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/news.css">
-
-  <script src="JS/main.js" defer></script>
+  <link rel="stylesheet" href="css/part3.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/site.js" defer></script>
 </head>
-
 <body>
   <header class="main header">
     <a href="home.html">
-      <img class="header-logo" src="IMAGE/a.png" width="60" height="60" alt="Secunda Mighty Stars logo">
+      <img class="header-logo" src="images/club-logo.png" width="60" height="60" alt="Secunda Mighty Stars FC logo">
     </a>
 
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
 
-    <nav id="site-nav">
+    <nav id="site-nav" aria-label="Main navigation">
       <ul class="nav-links">
         <li><a href="home.html">Home</a></li>
-        <li><a href="aboutus.html">About us</a></li>
-        <li><a href="fixtures.html">Fixtures&amp;Results</a></li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="fixtures.html">Fixtures &amp; Results</a></li>
         <li><a href="news.html">News</a></li>
-        <li><a href="Squad.html">Team Profile</a></li>
+        <li><a href="squad.html">Team Profile</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- NEWS BANNER -->
   <section class="news-banner">
-    <img src="IMAGE/NEDBANK7_56703.jpg" alt="Fans supporting Secunda Mighty Stars">
+    <img src="images/fans-cheering-in-stands.jpg" alt="Supporters in red jackets cheering from the stands" fetchpriority="high">
     <div class="news-banner-text">
       <h1>All News</h1>
     </div>
   </section>
 
-  <!-- NEWS LIST -->
-  <section class="news">
+  <!-- SEARCH / FILTER / SORT -->
+  <form class="list-tools" role="search" onsubmit="return false">
+    <div class="tool">
+      <label for="news-search">Search news</label>
+      <input type="search" id="news-search" placeholder="e.g. debut, cup, kit" autocomplete="off">
+    </div>
+    <div class="tool">
+      <label for="news-tag">Category</label>
+      <select id="news-tag"><option value="all">All categories</option></select>
+    </div>
+    <div class="tool">
+      <label for="news-sort">Sort by</label>
+      <select id="news-sort">
+        <option value="newest">Newest first</option>
+        <option value="oldest">Oldest first</option>
+      </select>
+    </div>
+  </form>
+  <p class="list-count" id="news-count" role="status" aria-live="polite"></p>
+
+  <!-- NEWS LIST cards are built from data.js -->
+  <section class="news" id="news-list">
     <div class="section-head">
       <h2>Latest Stories</h2>
     </div>
-
-    <article class="news-card">
-      <img src="IMAGE/debut.jpeg" alt="Lunga celebrating his league debut goal">
-      <div class="news-card-body">
-        <p class="date">16 September 2026</p>
-        <h3>League debut goal for Lunga</h3>
-        <p>Debutant Lunga scored the third goal to seal the win against Kwandebele United in our first league match of the season.</p>
-      </div>
-    </article>
-
-    <article class="news-card">
-      <img src="IMAGE/volks.jpeg" alt="Nedbank Cup match">
-      <div class="news-card-body">
-        <p class="date">8 September 2026</p>
-        <h3>We bow out of the Nedbank Cup</h3>
-        <p>The club played a 3-3 draw against our rivals in the Nedbank Cup and bowed out of the competition.</p>
-      </div>
-    </article>
-
-    <article class="news-card">
-      <img src="IMAGE/v.jpg" alt="Friendly match preview">
-      <div class="news-card-body">
-        <p class="date">1 September 2026</p>
-        <h3>Season preparations are underway</h3>
-        <p>Preparations have begun, with a lot of friendlies to be played before the start of the official season.</p>
-      </div>
-    </article>
+    <noscript><p>Please enable JavaScript to see the news stories.</p></noscript>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="footer-col">
       <h3>Secunda Mighty Stars FC</h3>
-      <p>Inkanyezi zesbakabaka.</p>
+      <p>Izinkanyezi zesbakabaka</p>
     </div>
+
     <div class="footer-col">
       <h3>Club</h3>
       <a href="fixtures.html">Fixtures</a>
-      <a href="Squad.html">Squad</a>
-      <a href="aboutus.html">History</a>
+      <a href="squad.html">Squad</a>
+      <a href="about-us.html">History</a>
+      <a href="gallery.html">Gallery</a>
     </div>
+
     <section class="sponsors">
       <h2>Our Partners</h2>
       <ul>
-        <li><img src="IMAGE/download.jpg" alt="sponsor" width="60" height="60"></li>
+        <li><img src="images/sponsor-maleleza-lifestyle-hub.jpg" alt="TM Maleleza Lifestyle Hub, club partner" width="60" height="60" loading="lazy"></li>
       </ul>
     </section>
+
     <div class="footer-col">
       <h3>Support &amp; Contacts</h3>
       <ul>
-        <li>Chairman: Fanyana &mdash; 017 202 8700</li>
-        <li>Manager &mdash; 017 505 7111</li>
+        <li>Chairman: Fanyana &mdash; <a href="tel:+27172028700">017 202 8700</a></li>
+        <li>Manager &mdash; <a href="tel:+27175057111">017 505 7111</a></li>
+        <li><a href="enquiry.html">Make an enquiry</a></li>
+        <li><a href="contact.html">Contact us</a></li>
       </ul>
     </div>
+
     <div class="footer-col">
       <h3>Follow</h3>
-      <a href="#">Instagram</a>
-      <a href="#">X / Twitter</a>
+      <!-- TODO: replace with the club's real profile addresses -->
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a>
     </div>
+
     <p class="footer-bottom">&copy; Secunda Mighty Stars FC. All rights reserved.</p>
   </footer>
+
 </body>
 </html>

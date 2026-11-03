@@ -1,102 +1,129 @@
-Secunda mighty stars
-website Overview:
-this website is developed for a local club called secunda stars.The purpose of the website is to grow community engagement and to engage with fans from outside the community about the latest news ,fixtures,league standings and the team profile and history
+Secunda Mighty Stars FC Website
+Sandile manana st10534324
+Live website: https://secundamstars.netlify.app
 
-website Obejectives:
--to provide information about the club
--allow visitors to engage withe club
--introduce the squad and coaches to the fans
--provide details about games to fans 
--provide the latest league form and stadings
--provides contacts and enquiry form
+WEBSITE OVERVIEW
+This website is developed for a local club called Secunda Mighty Stars. The purpose of the website is to grow community engagement and to engage with fans from outside the community about the latest news, fixtures, league standings, the team profile and the club history.
 
-Website Pages
-1.Home page
--this page is the main entry of the website
--it gives the overview of the website without visiting each page
-it contains:club logo navigation,hero section,club introductio,meet the squad button,latest news,upcoming fixtures,league standings,club statistics,sponsor information,contact information,social media links
+WEBSITE OBJECTIVES
+- To provide information about the club
+- To allow visitors to engage with the club
+- To introduce the squad and coaches to the fans
+- To provide details about games to fans
+- To provide the latest league form and standings
+- To provide contacts, an enquiry form and a contact form
 
-2.About us page
-this page provides the information about the club helping visitors understand how the club has developed and its core principles which includes:
--club history
--history timeline
--mission statement
--club values
--stadium information
--commuity information
--location of stadium
--enquiry form
+WEBSITE PAGES
+1. Home page (home.html)
+- The main entry of the website. It gives an overview without visiting each page.
+- It contains: club logo, navigation, hero section, meet the squad button, latest news, upcoming fixture, league standings, club statistics, sponsor information, contact information and social media links.
 
-3.Fixtures & results
-this page contains details about the clubs games and results and shows the performance and when the the team is performing including:
--fixtures
--recent results
--form
--matchday imformation
--dates and time of fixtures
--the game venue
+2. About us page (about-us.html)
+Information about how the club has developed and its core principles:
+- Club history and history timeline
+- Mission statement and club values
+- Stadium information and community information
+- Frequently asked questions (accordion)
+- Interactive map of the stadium
 
-4.News page
-this page updates fans about all the latest happenings of the club and updates including:
--news stories
--headlines
+3. Fixtures and results (fixtures.html)
+- Upcoming fixtures, recent results and form, and the league standings, shown in tabs
+- Matchday information, dates, times and the game venue
 
-5.team profile
-this page provides information about the team profile.
--goalkeepers
--defenders
--midfilders
--fowards
--coaching staff
-with player cards containg the deatails of the player
+4. News page (news.html)
+- News stories and headlines
+- Search, category filter and sort
 
-.resources used
--HTML was used to create the structure and content of the website
--Css was used to edit the appearence and layout of the website including editing colors,fonts,spacing,buttons,header,cards,league tables,pagebanners, responsive layout and the layout of the footer
--Google fonts used to improve the typography of the website using Oswald and inter
--Images are used for the club branding,players,news,supporters,sponsors,merchandise, and hero section
+5. Team profile (squad.html)
+- Goalkeepers, defenders, midfielders, forwards and coaching staff
+- Player cards with the number, name and position. Click a card for more details.
+- Search, position filter and sort
 
-.Css structure
-base.css ,home.css, aboutus.css,fixtures.css, news.css , teamProfile.css
--base.css contains common styles used in the website to keep design consistant
--each page has its own css file enabling the website to be easy to maintain.
+6. Gallery (gallery.html)
+- Photo grid with category filters and a lightbox to view photos in a larger size
 
-.Navigation
--The website has a navigation that links all the pages togetherallowing user to move in between the pages
+7. Enquiry (enquiry.html)
+- For enquiring about membership, sponsorship or volunteering
+- Once the input is validated, the page answers with the cost and availability
 
-.Responsive design
--responsive css techniques are used to allow the website to work on different screens using techniques like:
--css grid
--flexible layouts
--media queries
--responsive card layouts
+8. Contact (contact.html)
+- For a general message to the club
+- Once the input is validated, the message is compiled into an email that the visitor sends from their own email app
 
-.enquiry form
--enquiry form is added in the about page
--allows the user to enter their name,email,reason for enquire and text message
+PROJECT STRUCTURE
+index.html          opens home.html
+home.html  about-us.html  fixtures.html  news.html  squad.html
+gallery.html  enquiry.html  contact.html
+robots.txt  sitemap.xml
+css/    base.css  home.css  aboutus.css  fixtures.css  news.css  teamProfile.css  part3.css
+js/     main.js  data.js  site.js  forms.js
+images/
+Proposal/wede.docx
 
-.developement areas of part 2
--Improving the HTML structure.
--Adding more content to the existing pages.
--Introducing shared CSS.
--Creating page specific CSS files.
--Improving navigation and page consistency.
--Adding more images.
--Improving the news layout.
--Improving the fixtures and results layout.
---Expanding the squad page.
--Adding a history timeline.
--Adding a location map.
--Adding an enquiry form.
--Improving the overall visual presentation.
--Adding responsive layout techniques.
+RESOURCES USED
+- HTML for the structure and content of the website
+- CSS for colours, fonts, spacing, buttons, header, cards, league table, page banners, responsive layout and the footer
+- JavaScript for the interactive features and form validation
+- Google Fonts: Oswald and Inter
+- Leaflet 1.9.4 (map library) with OpenStreetMap map tiles
+- Formspree (free form service) for the enquiry form
+- Netlify to host the live website
+- Images for club branding, players, news, supporters, sponsors, merchandise and the hero section
 
-.How the project works
--Download the folder.
--Open the project folder.
--Open home.html.
--The website will open in a web browser.
--Use the navigation menu to access the other pages
+CSS STRUCTURE
+base.css, home.css, aboutus.css, fixtures.css, news.css, teamProfile.css, part3.css
+- base.css contains the common styles used on every page to keep the design consistent.
+- Each page has its own CSS file, which makes the website easy to maintain.
+- part3.css contains the styles for the Part 3 features (tabs, accordion, modal, gallery, forms, map and animations).
 
-.author
-Secunda mighty stars fc
+NAVIGATION
+The navigation links all the pages together so that visitors can move between them. The current page is highlighted.
+
+RESPONSIVE DESIGN
+The website works on different screen sizes using CSS grid, flexible layouts, media queries and responsive card layouts. On phones the navigation becomes a menu button.
+
+JAVASCRIPT FILES
+- js/data.js: all content (news, fixtures, standings, squad, enquiry prices). The pages are built from this one file.
+- js/site.js: accordion, tabs, modal, lightbox, map, animations, dynamic content, search, filter and sort.
+- js/forms.js: form validation, error messages, AJAX submission and the email builder.
+- js/main.js: the navigation menu button and the "you are here" link.
+
+PART 3: FEATURES
+Interactive elements
+- Accordion (FAQ on the About us page), tabs (Fixtures and results page), modal pop-ups (news and player cards), lightbox gallery, interactive Leaflet map, animations and transitions, and DOM manipulation (elements are created with JavaScript).
+Dynamic content
+- News, fixtures, standings and the squad are loaded from js/data.js, with search, filter and sort on the News and Team profile pages.
+Forms
+- Both forms use HTML5 validation attributes and JavaScript validation (phone number format, date range, name characters, email format and message length), show error messages next to each field, and submit with AJAX.
+- Enquiry form: membership, sponsorship or volunteering. The answer shows the cost and availability.
+- Contact form: the message is compiled into an email addressed to the club.
+
+PART 3: SEO
+Target keywords: Secunda football club, Secunda Mighty Stars, eMbalenhle football, Mpumalanga amateur football, Hollywoodbets league, Nedbank Cup, fixtures and results.
+On-page
+- Unique title and meta description on every page, one h1 per page with h2 and h3 below it, descriptive image file names and alt text, clean lowercase addresses, internal links and a mobile friendly layout.
+Off page plan
+- Backlinks: ask local schools, sponsors and the Secunda community to link to the website.
+- Social media: share news stories and match reports on the club's social media.
+- Local SEO: list the club on Google Business Profile and in local directories. The home page includes structured data for the club in Secunda, Mpumalanga.
+Technical
+- robots.txt, sitemap.xml, canonical links and structured data.
+- Page speed: scripts use defer, fonts use display=swap, images are lazy loaded and the largest unused photo was compressed.
+- Security: external links use rel="noopener noreferrer", form input is inserted as text and never as HTML, a hidden field catches spam bots, and HTTPS is provided by the host.
+
+FORM SETUP AND SAMPLE DATA
+[EDIT: choose one and delete the other]
+- The forms are connected to Formspree and send enquiries to the club.
+
+
+PHOTO CREDITS
+-  Match photographs: Tycoon Snap (2026).
+- Map: (c) OpenStreetMap contributors. Fonts: Google Fonts.
+
+HOW THE PROJECT WORKS
+- Download the folder and open index.html (it opens home.html), or open home.html directly.
+- Use the navigation menu to reach the other pages.
+- The map and fonts need an internet connection.
+
+AUTHOR
+sandile , Secunda Mighty Stars FC POE

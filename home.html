@@ -1,216 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Secunda Mighty Stars FC | Home</title>
-
+  <title>Secunda Mighty Stars FC | Football Club in Secunda, Mpumalanga</title>
+  <meta name="description" content="Secunda Mighty Stars FC, founded in 1990 in eMbalenhle. Follow our fixtures, results, league standings, club news and squad.">
+  <meta property="og:title" content="Secunda Mighty Stars FC | Football Club in Secunda, Mpumalanga">
+  <meta property="og:description" content="Secunda Mighty Stars FC, founded in 1990 in eMbalenhle. Follow our fixtures, results, league standings, club news and squad.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+  <link rel="canonical" href="https://secundamstars.netlify.app/home.html">
+  <meta property="og:url" content="https://secundamstars.netlify.app/home.html">
+  <meta property="og:image" content="https://secundamstars.netlify.app/images/players-in-new-kit.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;600&display=swap"
-    rel="stylesheet">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/home.css">
-
-
-  <script src="JS/main.js" defer></script>
+  <link rel="stylesheet" href="css/part3.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsTeam",
+  "name": "Secunda Mighty Stars FC",
+  "sport": "Soccer",
+  "foundingDate": "1990",
+  "url": "https://secundamstars.netlify.app/",
+  "logo": "https://secundamstars.netlify.app/images/club-logo.png",
+  "description": "Amateur football club from eMbalenhle, Secunda, Mpumalanga, South Africa.",
+  "location": {
+    "@type": "Place",
+    "name": "Secunda Stadium",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Secunda",
+      "addressRegion": "Mpumalanga",
+      "addressCountry": "ZA"
+    }
+  }
+}
+  </script>
+  <script src="js/main.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/site.js" defer></script>
 </head>
-
 <body>
   <header class="main header">
     <a href="home.html">
-      <img class="header-logo" src="IMAGE/a.png" width="60" height="60" alt="Secunda Mighty Stars logo">
+      <img class="header-logo" src="images/club-logo.png" width="60" height="60" alt="Secunda Mighty Stars FC logo">
     </a>
 
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
 
-    <nav id="site-nav">
+    <nav id="site-nav" aria-label="Main navigation">
       <ul class="nav-links">
         <li><a href="home.html">Home</a></li>
-        <li><a href="aboutus.html">About us</a></li>
-        <li><a href="fixtures.html">Fixtures&amp;Results</a></li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="fixtures.html">Fixtures &amp; Results</a></li>
         <li><a href="news.html">News</a></li>
-        <li><a href="Squad.html">Team Profile</a></li>
+        <li><a href="squad.html">Team Profile</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
+
   <!-- HERO -->
-
   <section class="hero">
-    <img src="IMAGE/WhatsApp Image 2026-09-17 at 00.25.35.jpeg" alt="stars of secunda">
-    <p style="font-size: xx-large;" class="hero-eyebrow">Est. 1990 &mdash; Secunda Mighty Stars FC</p>
-
-    <p><span
-        style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">
-        Embalenhle to the World!!</span></p>
+    <img src="images/players-in-new-kit.jpeg" alt="Four Secunda Mighty Stars FC players in the club's black and red kit" fetchpriority="high">
+    <p class="hero-eyebrow">Est. 1990 &mdash; Secunda Mighty Stars FC</p>
+    <h1>eMbalenhle to the World!</h1>
     <div class="hero-actions">
-
-      <a href="Squad.html" class="btn btn-primary">Meet the Squad</a>
-
+      <a href="squad.html" class="btn btn-primary">Meet the Squad</a>
     </div>
-
   </section>
-  <!-- NEWS -->
+
+  <!-- NEWS cards are built from data.js -->
   <section class="news">
     <div class="news-header">
       <h2>Latest News</h2>
       <a href="news.html">More news &rarr;</a>
     </div>
-    <!--news cards-->
-    <div class="news-grid">
-      <a class="news-card" href="news.html">
-        <img src="IMAGE/vk.jpeg" alt="Match report" loading="lazy">
-        <div class="news-card-body">
-          <span class="news-tag">Match Report</span>
-          <h3>Secunda stars win by three goals to a margin in a </h3>
-          <p class="news-date">16 Oct 2026</p>
-        </div>
-      </a>
-
-      <a class="news-card" href="news.html">
-        <img src="IMAGE/debut.jpeg" alt="Squad news" loading="lazy">
-        <div class="news-card-body">
-          <span class="news-tag">Squad News</span>
-          <h3>debut goal for smangmang .introduced in the second half and clinched the victory</h3>
-          <p class="news-date"> 12 Oct 2026</p>
-        </div>
-      </a>
-
-      <a class="news-card" href="news.html">
-        <img src="IMAGE/merchandise.jpeg" alt="Club news" loading="lazy">
-        <div class="news-card-body">
-          <span class="news-tag">Club News</span>
-          <h3>Secunda stars release their supporters kit.now on sale!</h3>
-          <p class="news-date">11 September 2026</p>
-        </div>
-      </a>
+    <div class="news-grid" id="home-news-grid">
+      <noscript><p>Please enable JavaScript to see the latest news, or visit the <a href="news.html">news page</a>.</p></noscript>
     </div>
   </section>
 
-
-  <!-- fixtures,results and standing are now merged into one section as their have they avaible web page theres no need to separate as i did in part 1 -->
+  <!-- FIXTURES, RESULTS AND STANDINGS built from data.js -->
   <section class="fixtures-overview">
     <h2>Fixtures, Results &amp; Standings</h2>
 
     <div class="matchday">
       <h3>Upcoming Fixture</h3>
-      <p class="hollywood division">League Fixtures &middot; Matchday 2 &middot; Secunda Mighty Stars</p>
-      <div class="fixtures">
-        <span>Secunda Mighty Stars vs Home Culture Express</span>
-      </div>
-      <p class="fixture details">Saturday 19 September 2026 &middot; 15:00 &middot; Secunda Stadium</p>
+      <div id="next-fixture"></div>
     </div>
 
     <div class="logs">
       <h3>League Standings</h3>
       <table>
         <thead>
-          <tr>
-            <th>Pos</th>
-            <th>Club</th>
-            <th>Pld</th>
-            <th>Pts</th>
-          </tr>
+          <tr><th>Pos</th><th>Club</th><th>Pld</th><th>Pts</th></tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Secunda Mighty Stars</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Shimandel</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>witbank CityLads</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Mjali fc</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>Phezulu fc</td>
-            <td>1</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>amsterdam united</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>middleburg united</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>amsterdam united</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>Armory Fc</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>Home defenders fc</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>home culture</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>carolina young boys fc</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td>13</td>
-            <td>kwandebele united</td>
-            <td>1</td>
-            <td>0</td>
-          </tr>
-
-        </tbody>
+        <tbody id="standings-body"></tbody>
       </table>
     </div>
 
     <div class="fixtures-overview-cta">
-      <a href="fixtures and results.html" class="btn btn-primary">View Fixtures &amp; Results</a>
+      <a href="fixtures.html" class="btn btn-primary">View Fixtures &amp; Results</a>
     </div>
   </section>
-
 
   <!-- CLUB STATS -->
   <section class="club stats">
     <div class="stats">
-      <p class="stats-number">1990</p>
+      <p class="stats-number" data-count="1990">1990</p>
       <p class="stats-label">Founded</p>
     </div>
     <div class="stats">
-      <p class="stats-number">1000</p>
+      <p class="stats-number" data-count="1000">1000</p>
       <p class="stats-label">Members</p>
     </div>
     <div class="stats">
@@ -223,40 +131,43 @@
   <footer>
     <div class="footer-col">
       <h3>Secunda Mighty Stars FC</h3>
-      <img src="IMAGE/a.png" width="60" height="60" alt="secunda mighty stars logo">
+      <p>Izinkanyezi zesbakabaka</p>
     </div>
 
     <div class="footer-col">
       <h3>Club</h3>
-      <a href="fixtures and results.html">Fixtures</a>
-      <a href="Squad.html">Squad</a>
-      <a href="aboutus.html">History</a>
+      <a href="fixtures.html">Fixtures</a>
+      <a href="squad.html">Squad</a>
+      <a href="about-us.html">History</a>
+      <a href="gallery.html">Gallery</a>
     </div>
 
     <section class="sponsors">
       <h2>Our Partners</h2>
       <ul>
-        <li><img src="IMAGE/download.jpg" alt="sponsor" width="60" height="60"></li>
+        <li><img src="images/sponsor-maleleza-lifestyle-hub.jpg" alt="TM Maleleza Lifestyle Hub, club partner" width="60" height="60" loading="lazy"></li>
       </ul>
     </section>
 
     <div class="footer-col">
       <h3>Support &amp; Contacts</h3>
       <ul>
-        <li>Chairman: Fanyana &mdash; 017 202 8700</li>
-        <li>Manager &mdash; 017 505 7111</li>
+        <li>Chairman: Fanyana &mdash; <a href="tel:+27172028700">017 202 8700</a></li>
+        <li>Manager &mdash; <a href="tel:+27175057111">017 505 7111</a></li>
+        <li><a href="enquiry.html">Make an enquiry</a></li>
+        <li><a href="contact.html">Contact us</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
       <h3>Follow</h3>
-      <a href="instagram">Instagram</a>
-      <a href="facebook">X / Twitter</a>
+      
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a>
     </div>
 
     <p class="footer-bottom">&copy; Secunda Mighty Stars FC. All rights reserved.</p>
   </footer>
 
 </body>
-
 </html>

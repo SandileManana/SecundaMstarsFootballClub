@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership, Sponsorship & Volunteer Enquiries | Secunda Mighty Stars FC</title>
+  <meta name="description" content="Ask Secunda Mighty Stars FC about membership, sponsorship or volunteering and get the cost and availability straight away.">
+  <meta property="og:title" content="Membership, Sponsorship & Volunteer Enquiries | Secunda Mighty Stars FC">
+  <meta property="og:description" content="Ask Secunda Mighty Stars FC about membership, sponsorship or volunteering and get the cost and availability straight away.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+  <link rel="canonical" href="https://secundamstars.netlify.app/enquiry.html">
+  <meta property="og:url" content="https://secundamstars.netlify.app/enquiry.html">
+  <meta property="og:image" content="https://secundamstars.netlify.app/images/players-in-new-kit.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/part3.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</head>
+<body>
+  <header class="main header">
+    <a href="home.html">
+      <img class="header-logo" src="images/club-logo.png" width="60" height="60" alt="Secunda Mighty Stars FC logo">
+    </a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+
+    <nav id="site-nav" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="fixtures.html">Fixtures &amp; Results</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="squad.html">Team Profile</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-banner p3-banner">
+    <h1>Make an Enquiry</h1>
+    <p>Ask about membership, sponsorship or volunteering and see the cost and availability straight away.</p>
+  </section>
+
+  <section class="p3-form-wrap">
+    <!-- Replace YOUR_FORM_ID with your Formspree form ID (see readMe) -->
+    <form id="enquiry-form" class="p3-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate data-validate>
+      <div class="form-field">
+        <label for="f-name">Full name <span aria-hidden="true">*</span></label>
+        <input type="text" id="f-name" name="name" autocomplete="name" required minlength="2" maxlength="60" data-rule="name" data-label="Your name" aria-describedby="f-name-error">
+        <p class="field-error" id="f-name-error"></p>
+      </div>
+      <div class="form-field">
+        <label for="f-email">Email address <span aria-hidden="true">*</span></label>
+        <input type="email" id="f-email" name="email" autocomplete="email" required maxlength="100" data-label="Email address" aria-describedby="f-email-error">
+        <p class="field-error" id="f-email-error"></p>
+      </div>
+      <div class="form-field">
+        <label for="f-phone">Phone number <span aria-hidden="true">*</span></label>
+        <input type="tel" id="f-phone" name="phone" autocomplete="tel" required inputmode="tel" pattern="(\+27|0)[0-9 ]{9,12}" placeholder="082 123 4567" data-rule="phone" data-label="Phone number" aria-describedby="f-phone-error">
+        <p class="field-hint" id="f-phone-hint">South African number, e.g. 082 123 4567.</p>
+        <p class="field-error" id="f-phone-error"></p>
+      </div>
+
+      <div class="form-field">
+        <label for="f-type">What is your enquiry about? <span aria-hidden="true">*</span></label>
+        <select id="f-type" name="type" required data-label="an enquiry type" aria-describedby="f-type-error">
+          <option value="">Choose an enquiry type&hellip;</option>
+          <option value="membership">Membership</option>
+          <option value="sponsorship">Sponsorship</option>
+          <option value="volunteer">Volunteering</option>
+        </select>
+        <p class="field-error" id="f-type-error"></p>
+      </div>
+
+      <div class="form-field" id="option-field" hidden>
+        <label for="f-option" id="f-option-label">Which option? <span aria-hidden="true">*</span></label>
+        <select id="f-option" name="option" data-label="an option" aria-describedby="f-option-error">
+          <option value="">Choose an option&hellip;</option>
+        </select>
+        <p class="field-error" id="f-option-error"></p>
+      </div>
+
+      <div class="form-field">
+        <label for="f-date">Preferred date for us to get in touch <span class="optional">(optional)</span></label>
+        <input type="date" id="f-date" name="visit_date" data-rule="date-future" data-label="The date" aria-describedby="f-date-error">
+        <p class="field-error" id="f-date-error"></p>
+      </div>
+
+      <div class="form-field">
+        <label for="f-message">Your message <span aria-hidden="true">*</span></label>
+        <textarea id="f-message" name="message" rows="5" required minlength="10" maxlength="500" data-counter data-label="Your message" aria-describedby="f-message-count f-message-error"></textarea>
+        <p class="field-hint" id="f-message-count"></p>
+        <p class="field-error" id="f-message-error"></p>
+      </div>
+
+      <div class="form-field">
+        <div class="check-row">
+          <input type="checkbox" id="f-consent" name="consent" value="yes" required aria-describedby="f-consent-error">
+          <label for="f-consent">I agree that the club may contact me about this enquiry. <span aria-hidden="true">*</span></label>
+        </div>
+        <p class="field-error" id="f-consent-error"></p>
+      </div>
+
+      <div class="hp-field" aria-hidden="true">
+        <label for="f-website">Leave this field empty</label>
+        <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Send Enquiry</button>
+      <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+    <div id="enquiry-response" class="p3-response" role="status" aria-live="polite" hidden></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-col">
+      <h3>Secunda Mighty Stars FC</h3>
+      <p>Izinkanyezi zesbakabaka</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Club</h3>
+      <a href="fixtures.html">Fixtures</a>
+      <a href="squad.html">Squad</a>
+      <a href="about-us.html">History</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+
+    <section class="sponsors">
+      <h2>Our Partners</h2>
+      <ul>
+        <li><img src="images/sponsor-maleleza-lifestyle-hub.jpg" alt="TM Maleleza Lifestyle Hub, club partner" width="60" height="60" loading="lazy"></li>
+      </ul>
+    </section>
+
+    <div class="footer-col">
+      <h3>Support &amp; Contacts</h3>
+      <ul>
+        <li>Chairman: Fanyana &mdash; <a href="tel:+27172028700">017 202 8700</a></li>
+        <li>Manager &mdash; <a href="tel:+27175057111">017 505 7111</a></li>
+        <li><a href="enquiry.html">Make an enquiry</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Follow</h3>
+      <!-- TODO: replace with the club's real profile addresses -->
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+    </div>
+
+    <p class="footer-bottom">&copy; Secunda Mighty Stars FC. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

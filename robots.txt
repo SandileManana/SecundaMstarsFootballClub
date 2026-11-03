@@ -1,0 +1,6 @@
+
+User-agent: *
+Allow: /
+
+# TODO: replace with your real website address once it is published
+Sitemap: https://secundamstars.netlify.app/sitemap.xml

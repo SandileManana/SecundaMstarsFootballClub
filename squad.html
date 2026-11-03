@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Team Squad & Coaching Staff | Secunda Mighty Stars FC</title>
+  <meta name="description" content="Meet the Secunda Mighty Stars FC first team squad by position: goalkeepers, defenders, midfielders and forwards, plus our coaching staff.">
+  <meta property="og:title" content="First Team Squad & Coaching Staff | Secunda Mighty Stars FC">
+  <meta property="og:description" content="Meet the Secunda Mighty Stars FC first team squad by position: goalkeepers, defenders, midfielders and forwards, plus our coaching staff.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_ZA">
+  <link rel="canonical" href="https://secundamstars.netlify.app/squad.html">
+  <meta property="og:url" content="https://secundamstars.netlify.app/squad.html">
+  <meta property="og:image" content="https://secundamstars.netlify.app/images/players-in-new-kit.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/teamProfile.css">
+  <link rel="stylesheet" href="css/part3.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/site.js" defer></script>
+</head>
+<body>
+  <header class="main header">
+    <a href="home.html">
+      <img class="header-logo" src="images/club-logo.png" width="60" height="60" alt="Secunda Mighty Stars FC logo">
+    </a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">&#9776;</button>
+
+    <nav id="site-nav" aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="fixtures.html">Fixtures &amp; Results</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="squad.html">Team Profile</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquiry</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-banner p3-banner">
+    <h1>Team Profile</h1>
+    <p>Meet the players and coaching staff of Secunda Mighty Stars FC.</p>
+  </section>
+
+  <!-- SEARCH / FILTER / SORT -->
+  <form class="list-tools" role="search" onsubmit="return false">
+    <div class="tool">
+      <label for="squad-search">Search players</label>
+      <input type="search" id="squad-search" placeholder="Name or shirt number" autocomplete="off">
+    </div>
+    <div class="tool">
+      <label for="squad-position">Position</label>
+      <select id="squad-position">
+        <option value="all">All positions</option>
+        <option value="Goalkeeper">Goalkeepers</option>
+        <option value="Defender">Defenders</option>
+        <option value="Midfielder">Midfielders</option>
+        <option value="Forward">Forwards</option>
+      </select>
+    </div>
+    <div class="tool">
+      <label for="squad-sort">Sort by</label>
+      <select id="squad-sort">
+        <option value="number">Shirt number</option>
+        <option value="name">Name (A to Z)</option>
+      </select>
+    </div>
+  </form>
+  <p class="list-count" id="squad-count" role="status" aria-live="polite"></p>
+
+  <!-- SQUAD cards are built from data.js -->
+  <section class="squad" id="squad-root">
+    <div class="section-head">
+      <h2>First Team Squad</h2>
+    </div>
+    <noscript><p>Please enable JavaScript to see the squad list.</p></noscript>
+  </section>
+
+  <!-- COACHING STAFF -->
+  <section class="coaching-staff">
+    <div class="section-head">
+      <h2>Coaching Staff</h2>
+    </div>
+    <div class="coach-grid">
+      <article class="coach-card">
+        <img src="images/player-placeholder.jpg" width="180" height="220" alt="Daniel, head coach of Secunda Mighty Stars" loading="lazy">
+        <h3>Daniel</h3>
+        <p class="role">Head Coach</p>
+      </article>
+
+      <article class="coach-card">
+        <img src="images/player-placeholder.jpg" width="180" height="220" alt="Sandile, assistant coach of Secunda Mighty Stars" loading="lazy">
+        <h3>Sandile</h3>
+        <p class="role">Assistant Coach</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-col">
+      <h3>Secunda Mighty Stars FC</h3>
+      <p>Izinkanyezi zesbakabaka</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Club</h3>
+      <a href="fixtures.html">Fixtures</a>
+      <a href="squad.html">Squad</a>
+      <a href="about-us.html">History</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+
+    <section class="sponsors">
+      <h2>Our Partners</h2>
+      <ul>
+        <li><img src="images/sponsor-maleleza-lifestyle-hub.jpg" alt="TM Maleleza Lifestyle Hub, club partner" width="60" height="60" loading="lazy"></li>
+      </ul>
+    </section>
+
+    <div class="footer-col">
+      <h3>Support &amp; Contacts</h3>
+      <ul>
+        <li>Chairman: Fanyana &mdash; <a href="tel:+27172028700">017 202 8700</a></li>
+        <li>Manager &mdash; <a href="tel:+27175057111">017 505 7111</a></li>
+        <li><a href="enquiry.html">Make an enquiry</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Follow</h3>
+      <!-- TODO: replace with the club's real profile addresses -->
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+    </div>
+
+    <p class="footer-bottom">&copy; Secunda Mighty Stars FC. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
